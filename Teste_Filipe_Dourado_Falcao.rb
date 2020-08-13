@@ -1,9 +1,9 @@
 class Comandos
 
-    def initialize()
-        @nome = "Filipe Dourado Falcão"
-        @data_nascimento = "27/11/1997"
-        @idade = 22
+    def initialize(nome, data_nascimento, idade)
+        @nome = nome
+        @data_nascimento = data_nascimento
+        @idade = idade
     end
 
     def exibirNome
@@ -39,7 +39,13 @@ class Comandos
         comando = nil
         while comando != "Parar" do
             puts "Digite o comando que deseja executar. Opções:\n"+
-                 "Comando 1, Comando 2, Comando 3, Comando 4, Comando 5, Comando 6 ou Parar."
+                  "Comando 1 -> Exibir Nome\n"+
+                  "Comando 2 -> Exibir data de nascimento\n"+
+                  "Comando 3 -> Exibir idade ao cubo\n"+
+                  "Comando 4 -> Inverter string\n"+
+                  "Comando 5 -> Dividir string\n"+
+                  "Comando 6 -> Somar data de nascimento\n"+
+                  "Parar -> Finaliza o programa"
             comando = gets
             
             case comando.chomp
@@ -69,5 +75,5 @@ class Comandos
     end
 end
 
-comandos = Comandos.new
+comandos = Comandos.new("Filipe Dourado Falcão", "27/11/1997", 22)
 comandos.exibirComandos
